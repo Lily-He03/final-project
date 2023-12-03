@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en-ca">
   <head>
-    <title>Exercise 1: HTML 101</title>
+    <title>final project</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+    href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
+  
 
   <body>
+    <div class="w3-sidebar w3-bar-block w3-dark-grey w3-card w3-animate-left" style="display:none" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large"
+      onclick="w3_close()">Close &times;</button>
+     
+      <a href="#" class="w3-bar-item w3-button w3-text-white w3-hover-black" onclick="closeNav()">Home</a>
+      <a href="#aboutme" class="w3-bar-item w3-button w3-text-white w3-hover-black" onclick="closeNav()">About Me</a>
+      <a href="#mytrip" class="w3-bar-item w3-button w3-text-white w3-hover-black" onclick="closeNav()">My Trip</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-text-white w3-hover-black" onclick="closeNav()">Portfolio</a>
+    </div>
+		
 
-    <h1>Exercise 1: HTML Structure and Tags</h1>
-    <!--
-		This is an HTML comment, its a way for developers to leave messages to other people who view the code. It will not render in the browser. You can delete this once you've read it as you do not need it.
-	-->
+    <div id="main">
 
-    <p>Remember: if you get into any trouble and need help this semester, navigate to w3schools.com</p>
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <div class="w3-container">
+        <h1>Welcome to my channel:)</h1>
+      </div>
+    </div>
+    <!-- About Section -->
+  	<div class="w3-content w3-justify w3-text-grey w3-padding-32" style="margin:16px" id="aboutme">
+      <h2>About Me</h2>
+      <hr class="w3-opacity">
+      <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    <!-- End About Section -->
+    </div>
+    <!-- Portfolio Section -->
+  	<div class="w3-padding-32 w3-content" style="margin:16px" id="portfolio">
+      <h2 class="w3-text-grey">Portfolio</h2>
+      <hr class="w3-opacity">
+    </div>
+    <!-- Grid for photos -->
 
-    <hr>
-    <!--
-		Note the image link below: it is relative not absolute. We'll learn more about this next week.
-	-->
-    <img src="https://media.giphy.com/media/H6VPKP45Nh8cYSv1Qe/giphy-downsized-large.gif" alt="a giraffe">
-    <p>Like many other animals in the African savannah and rainforest biomes, giraffes are endangered. These are all hardy creatures, but their numbers are diminished by hunting, and their habitats are increasingly constrained by climate change.</p>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
 
-    <!--
-		Convert the data below into a table
-	-->
 
-    <h2>IUCN "red" list of threatened species</h2>
+    <script>
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "25%";
+      document.getElementById("mySidebar").style.width = "25%";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
+    }
+    </script>
 
-    Animal Numbers Status
-    African elephant 450,000 VU
-    Hippo 125,000 VU
-    Giraffe 98,445 VU
-    Lion 20,000 VU
-    Cheetah 7,500 VU
-    Black rhino 5,250 CR
-    Mountain gorilla 880 CR
-    <hr>
-
-    Q: How Can I Help?
-    A: Join the fight to save endangered animals!
-    We need students at the University of Waterloo to help us. Sign up!
   </body>
 </html>
